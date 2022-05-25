@@ -1,0 +1,22 @@
+.parallax {
+    /* The image used */
+    background-image: url(/static/images/kevinpwhitecover.jpg);
+  
+    /* Set a specific height */
+    min-height: 50vw;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  @media only screen and (min-device-width: 320px) 
+      and (max-device-width: 850px) 
+      and (-webkit-min-device-pixel-ratio: 2) { 
+          .parallax {
+              min-height: 70vw;
+              background-attachment: inherit;
+          }
+  }
