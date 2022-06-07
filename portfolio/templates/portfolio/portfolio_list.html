@@ -18,9 +18,10 @@
     </div>
       <ul class="nav nav-pills nav-justified mx-48 flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab" role="tablist">
         {% if object_list %}
-          {% comment %} <li class="pt-6 mr-2"><strong>View By:</strong></li> {% endcomment %}
         {% else %}
-          <li class="pt-6 mr-2"><h6>Sorry, nothing has been posted yet!</h6>
+        <div class="mx-auto min-h-screen">
+          <h6 class="text-center text-2xl">Sorry, nothing has been posted yet!</h6>
+        </div>
         {% endif %}
         {% for category in categories_list %}
         <li class="nav-item flex-grow text-center my-2 whitespace-nowrap" role="presentation">
