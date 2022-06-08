@@ -13,27 +13,31 @@ This code is for personal use. This is my portfolio code build on Django with ta
 5. Environment Files Needed in root folder. Refer to example in code and change with your variables. All variables are set in the settings.py file for django.
     1. .env for development
     2. .env.prod for development
-    3. .env.prod.db for development database
 
-This will spin up 2 containers; django built in runserver and postgres containers
+This will spin up 2 containers; django built in runserver and postgres container
 ```bash
 # Create .env file
 sudo nano .env 
 
+DEBUG=1
+SECRET_KEY=$SECRET_KEY
+
 EMAIL_PASSWORD=$EMAIL_PASSWORD
 EMAIL_ADMIN=$EMAIL_ADMIN
 EMAIL_ADDRESS=$EMAIL_ADDRESS
-DEBUG=0
-SECRET_KEY=$SECRET_KEY
-DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+EMAIL_PORT=$EMAIL_PORT
+EMAIL_HOST=$EMAIL_HOST
+EMAIL_USE_TLS=$EMAIL_USE_TLS
+
 SQL_ENGINE=django.db.backends.postgresql
-SQL_DATABASE=$SQL_DATABASE
-SQL_USER=$SQL_USER
-SQL_PASSWORD=$SQL_PASSWORD
+POSTGRES_DB=$POSTGRES_DB
+POSTGRES_USER=$POSTGRES_USER
+POSTGRES_PASSWORD=$POSTGRES_PASSWORD
 SQL_HOST=$SQL_HOST
-SQL_PORT=$SQL_PORT
+SQL_PORT=$SQL_POST
 DATABASE=$DATABASE
-#save to .env
+
+DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
 
 # Set permissions for .env
 sudo chmod 600 .env
@@ -53,31 +57,29 @@ This has will spin up 3 containers; nginx, gunicorn, and postgres containers
 sudo nano .env 
 
 #copy these variables and use the correct strings
+DEBUG=1
+SECRET_KEY=$SECRET_KEY
+
 EMAIL_PASSWORD=$EMAIL_PASSWORD
 EMAIL_ADMIN=$EMAIL_ADMIN
 EMAIL_ADDRESS=$EMAIL_ADDRESS
-DEBUG=0
-SECRET_KEY=$SECRET_KEY
-DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+EMAIL_PORT=$EMAIL_PORT
+EMAIL_HOST=$EMAIL_HOST
+EMAIL_USE_TLS=$EMAIL_USE_TLS
+
 SQL_ENGINE=django.db.backends.postgresql
-SQL_DATABASE=$SQL_DATABASE
-SQL_USER=$SQL_USER
-SQL_PASSWORD=$SQL_PASSWORD
-SQL_HOST=$SQL_HOST
-SQL_PORT=$SQL_PORT
-DATABASE=$DATABASE
-
-# Create .env file
-sudo nano .env.prod.db
-
-#copy these variables and use the correct strings
+POSTGRES_DB=$POSTGRES_DB
 POSTGRES_USER=$POSTGRES_USER
 POSTGRES_PASSWORD=$POSTGRES_PASSWORD
-POSTGRES_DB=$POSTGRES_DB
+SQL_HOST=$SQL_HOST
+SQL_PORT=$SQL_POST
+DATABASE=$DATABASE
+
+DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+CSRF_TRUSTED_ORIGINS=['http://*.127.0.0.1']
 
 # Set permissions for .env
 sudo chmod 600 .env.prod
-sudo chmod 600 .env.prod.db
 
 # Command to build docker production containers
 sudo docker-compose up -f docker-compose.prod.yml up -d --build
