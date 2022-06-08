@@ -17,15 +17,17 @@ import os
 ######################
 ### Custom settings###
 ######################
-
-# Site ID is needed for this
-SITE_ID = 1
-
 # .env settings
 
 # Initialise environment variables
 env = environ.Env()
 environ.Env.read_env()
+
+# Comment these out for development deployment.
+#CSRF_TRUSTED_ORIGINS = env('CSRF_TRUSTED_ORIGINS')
+
+# Site ID is needed for this
+SITE_ID = 1
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -91,9 +93,9 @@ WSGI_APPLICATION = 'kevinpwhite.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": env('SQL_ENGINE'),
-        "NAME": env('SQL_DATABASE'),
-        "USER": env('SQL_USER'),
-        "PASSWORD": env('SQL_PASSWORD'),
+        "NAME": env('POSTGRES_DB'),
+        "USER": env('POSTGRES_USER'),
+        "PASSWORD": env('POSTGRES_PASSWORD'),
         "HOST": env('SQL_HOST'),
         "PORT": env('SQL_PORT'),
     }
