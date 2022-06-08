@@ -24,7 +24,7 @@ env = environ.Env()
 environ.Env.read_env()
 
 # Comment these out for development deployment.
-#CSRF_TRUSTED_ORIGINS = env('CSRF_TRUSTED_ORIGINS')
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split(",")
 
 # Site ID is needed for this
 SITE_ID = 1
@@ -41,7 +41,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(",")
 
 # Application definition
 
