@@ -37,7 +37,8 @@ SQL_HOST=$SQL_HOST
 SQL_PORT=$SQL_POST
 DATABASE=$DATABASE
 
-DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+ALLOWED_HOSTS=yourdomainname.com,www.yourdomainname.com
+CSRF_TRUSTED_ORIGINS=https://*.yourdomainname.com,http://*.yourdomainname.com
 
 # Set permissions for .env
 sudo chmod 600 .env
@@ -75,8 +76,8 @@ SQL_HOST=$SQL_HOST
 SQL_PORT=$SQL_POST
 DATABASE=$DATABASE
 
-DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-CSRF_TRUSTED_ORIGINS=['http://*.127.0.0.1']
+ALLOWED_HOSTS=yourdomainname.com,www.yourdomainname.com
+CSRF_TRUSTED_ORIGINS=https://*.yourdomainname.com,http://*.yourdomainname.com
 
 # Set permissions for .env
 sudo chmod 600 .env.prod
