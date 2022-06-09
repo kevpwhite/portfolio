@@ -81,6 +81,10 @@ CSRF_TRUSTED_ORIGINS=['http://*.127.0.0.1']
 # Set permissions for .env
 sudo chmod 600 .env.prod
 
+# Create SSL Certificate
+cd nginx
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./etc/ssl/private/localhost.key -out ./etc/ssl/certs/localhost.crt
+
 # Command to build docker production containers
 sudo docker-compose up -f docker-compose.prod.yml up -d --build
 
