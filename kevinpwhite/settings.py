@@ -18,13 +18,23 @@ import os
 ### Custom settings###
 ######################
 # .env settings
-
 # Initialise environment variables
 env = environ.Env()
 environ.Env.read_env()
 
 # Comment these out for development deployment.
 CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split(",")
+#SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_SECONDS = 3600
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_REFERRER_POLICY = "strict-origin"
+SECURE_BROWSER_XSS_FILTER = True
+CAPTCHA_FONT_SIZE=42
+CAPTCHA_IMAGE_SIZE=[200,48]
+CAPTCHA_BACKGROUND_COLOR="#ffffff"
 
 # Site ID is needed for this
 SITE_ID = 1
@@ -58,6 +68,7 @@ INSTALLED_APPS = [
     'mptt',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'captcha'
 ]
 
 MIDDLEWARE = [
