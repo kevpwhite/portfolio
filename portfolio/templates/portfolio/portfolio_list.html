@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-      <ul class="nav nav-pills nav-justified mx-48 flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab" role="tablist">
+      <ul class="nav nav-pills nav-justified mx-32 lg:mx-48 flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab" role="tablist">
         {% if object_list %}
         {% else %}
         <div class="mx-auto min-h-screen">
@@ -46,7 +46,7 @@
         </li>
         {% endfor %}
       </ul>
-      <div class="mx-auto min-h-screen mx-48 lg:grid lg:grid-cols-3 lg:gap-8">
+      <div class="mx-auto min-h-screen mx-32 lg:mx-48 lg:grid lg:grid-cols-3 lg:gap-8">
         {% for portfolio in portfolios %}
           {% include 'portfolio/base_list.html' %}
         {% endfor %}

@@ -9,7 +9,8 @@ app_name='portfolio'
 class PortfolioListView(ListView):
     model = Portfolio
     context_object_name ='portfolios'
-    paginate_by = 6
+    paginate_by = 9
+    ordering = ['title']
 
     def get_context_data(self, **kwargs):
         context = super(PortfolioListView, self).get_context_data(**kwargs)

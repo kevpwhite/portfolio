@@ -5,7 +5,7 @@
 <div class="animate__animated animate__fadeInUp mx-auto">
   <h1 class="text-center text-4xl my-6">{{ category }}</h1>
   {% if object_list %}
-    <div class="mx-auto min-h-screen mx-48 lg:grid lg:grid-cols-3 lg:gap-8">
+    <div class="mx-auto min-h-screen mx-32 lg:mx-48 lg:grid lg:grid-cols-3 lg:gap-8">
       {% for portfolio in categories %}
         {% include 'portfolio/base_list.html' %}
       {% endfor %}
