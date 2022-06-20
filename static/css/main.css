@@ -44,7 +44,7 @@ input#id_captcha_1:focus {
     and (max-device-width: 850px) 
     and (-webkit-min-device-pixel-ratio: 2) { 
         .parallax {
-            min-height: 70vw;
+            min-height: 100vw;
             background-attachment: inherit;
         }
 }

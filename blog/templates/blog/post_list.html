@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="animate__animated animate__fadeInUp mx-auto">
+<div class="animate__animated animate__fadeInUp container mx-auto p-8 lg:px-20">
     <h1 class="text-center text-4xl my-5">Blog</h1>
     <div class="flex justify-center">
       <div class="xl:w-96">
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-      <ul class="nav nav-pills nav-justified mx-32 lg:mx-48 flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab" role="tablist">
+      <ul class="nav nav-pills nav-justified flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4" id="pills-tab" role="tablist">
         {% if object_list %}
         {% else %}
         <div class="mx-auto min-h-screen">
@@ -35,7 +35,7 @@
             rounded
             px-6
             py-3
-            my-2
+            lg:my-2
             md:mr-2
             hover:text-white
             hover:bg-sky-600 
@@ -46,7 +46,7 @@
         </li>
         {% endfor %}
       </ul>
-      <div class="mx-auto min-h-screen mx-32 lg:mx-48 lg:grid lg:grid-cols-3 lg:gap-8">
+      <div class="mx-auto min-h-screen lg:grid lg:grid-cols-3 lg:gap-8">
         {% for post in posts %}
             {% include 'blog/base_list.html' %}
         {% endfor %}

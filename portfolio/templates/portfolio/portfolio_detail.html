@@ -3,13 +3,13 @@
 {% block content %}
 
 {% comment %} ----------------offcanvas start-------------------- {% endcomment %}
-<div class="animate__animated animate__fadeInUp flex-grow p-4 overflow-y-auto small min-h-screen">
-    <div class="flex justify-center w-3/4 mx-auto">
+<div class="animate__animated animate__fadeInUp flex-grow pt-4 overflow-y-auto small min-h-screen container mx-auto p-8 lg:px-20">
+    <div class="flex justify-center">
         <div class="bg-white">
-          <div class="rounded-lg m-auto px-4">
+          <div class="rounded-lg m-auto">
             <img class="w-full object-contain object-center rounded-lg shadow-2xl" src="{{ portfolio.images.url }}" alt="{{ portfolio.title }}" />
           </div>
-          <div class="p-6 justify-start">
+          <div class="py-6 justify-start">
               <h1 class="text-4xl mb-4">{{ portfolio.title }}</h1>
               {{portfolio.description | safe | linebreaksbr }}
             <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
