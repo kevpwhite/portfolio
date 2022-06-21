@@ -40,6 +40,10 @@ input#id_captcha_1:focus {
     border-color: rgb(2 132 199 / var(--tw-border-opacity));
 }
 
+svg {
+    -webkit-transform: translate(0px,0px);
+}
+
 @media only screen and (min-device-width: 320px) 
     and (max-device-width: 850px) 
     and (-webkit-min-device-pixel-ratio: 2) { 
