@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import PostSitemap, PortfolioSiteMap, StaticSitemap
+from .views import error_404, error_500
 
 admin.site.site_header = "Kevin P White's Admin Portal"
 
@@ -33,11 +34,11 @@ urlpatterns = [
     path('', include('home.urls')),
     path('portfolio/', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps},
      name='django.contrib.sitemaps.views.sitemap'),
     path('captcha/', include('captcha.urls'))
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# #error handling template override
-handler404 = 'kevinpwhite.views.page_not_found_view'
+handler404 = error_404
+handler500 = error_500
