@@ -25,3 +25,6 @@ def home(request):
     else:
         f = ContactUs()
         return render(request, 'home.html', {'form': f})
+
+def links(request):
+    return render(request, 'links.html')
