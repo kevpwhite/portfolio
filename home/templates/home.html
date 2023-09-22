@@ -1,0 +1,362 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load honeypot %}
+
+<div class="bg-cover bg-fixed bg-no-repeat bg-center h-screen animate__animated animate__fadeIn" style="background-image: url(&quot;{% static '/images/kevinpwhitecover.webp'%}&quot;)"></div>
+
+<div id="about" class="container mx-auto p-8 lg:p-20">
+    <div class="lg:flex lg:flex-row py-5">
+        <div class="lg:w-1/5 w-full">
+            <h1 class="text-2xl text-sky-600">About Me</h1>
+        </div>
+        <div class="lg:w-4/5 w-full">
+            <p>I am a Southern California native who pursued a degree in Information Systems Security at Westwood Technical College. From a young age, I had an insatiable curiosity for electronics and eagerly disassembled anything with a power button. It was evident early on that my passion for technology would pave the way for my career.</p>
+            <br>
+            <p>While in college, I gained valuable experience working as a help-desk support technician at Carl Karcher Enterprises. After completing my education, I was fortunate to join one of the world's largest construction companies.</p>
+        </div>
+    </div>
+    <div class="lg:flex lg:flex-row py-5">
+        <div class="lg:w-1/5 w-full">
+            <h1 class="text-2xl text-sky-600">Experience</h1>
+        </div>
+        <div class="lg:w-4/5 w-full">
+            <h3 class="text-xl">The Walsh Group Corporation 2016-Present</h3>
+            <p>For the initial five years of my tenure at The Walsh Group, I served as an Information Technology Project Manager. During this time, I successfully oversaw a $2.5 billion construction project in Inglewood, California, managing the IT infrastructure for eight office networks, supporting over 400 users, and implementing a suite of Information Technology solutions. My responsibilities encompassed managing SharePoint, network equipment, computer/iPad/iPhone deployment, and the development of the project website.</p>
+            <br>
+            <p>Subsequently, my role evolved into that of a Senior Regional Technology Coordinator. In this capacity, I extended my support to the corporate team, overseeing the project mobilization and demobilization processes from an Information Technology perspective. This role involved interviewing, procuring, team management, and contributing to logistics planning.</p>
+            <br>
+            <p class="mt-2">I am currently a part of the IT infrastructure team and hold the position of Sr. IT Infrastructure Engineer. In this role, my responsibilities encompass designing, implementing, and maintaining the company's IT infrastructure, with a focus on ensuring its security, reliability, and scalability. I collaborate closely with other teams, including security, network, and application teams, to ensure that the infrastructure aligns with the overall business objectives. Staying up-to-date with the latest technologies and industry trends is a priority, as I continuously work on enhancing the IT infrastructure to meet the evolving needs of the business. Additionally, I am actively involved in the deployment and governance of our Microsoft Power Automate suite for the company.</p>
+        </div>
+    </div>
+    <div class="lg:flex lg:flex-row">
+        <div class="lg:w-1/5 w-full">
+        </div>
+        <div class="lg:w-4/5 w-full">
+            <h3 class="text-xl">Kiewit Corporation 2008-2016</h3>
+            <p>I spent nine years at Kiewit Pacific Sons in the Southern California District, where we engineered and constructed a multitude of impressive infrastructure projects. During my tenure, our district successfully completed various projects, including water treatment facilities, desalination plants, power plants, and transportation projects across the Western United States. Throughout my time there, I held various technology roles that played a crucial role in supporting the district's success, such as Web Developer, SharePoint Administrator, Solutions Technology Manager, and IT Network Administrator.</p>
+        </div>
+    </div>
+    <div class="lg:flex lg:flex-row py-5">
+        <div class="lg:w-1/5 w-full">
+            <h1 class="text-2xl text-sky-600">Tech Pro HQ</h1>
+        </div>
+        <div class="lg:w-4/5 w-full">
+          <p>I possess a distinctive skill set – more than just a technologist, I am a dedicated problem solver! I thrive on challenges and relish the opportunity to find solutions. If you're grappling with a technology-related issue that requires resolution, I'm here to assist. I am the owner of <a class="text-sky-600" href="https://techprohq.com" target="_blank">Tech Pro HQ</a>, a technology solutions company, and I encourage you to explore my portfolio to see examples of past projects. Don't hesitate to reach out today to begin addressing your technology challenges.</p>
+        </div>
+    </div>
+    <div class="lg:flex lg:flex-row py-5">
+      <div class="lg:w-1/5 w-full">
+          <h1 class="text-2xl text-sky-600">Dad Bridge</h1>
+      </div>
+      <div class="lg:w-4/5 w-full">
+        <p><a class="text-sky-600" href="https://dadbridge.com" target="_blank">The Dad Bridge Show</a> is a podcast show for dads by fathers. It aims to bridge the gap from dad to fatherhood. COMING SOON!</p>
+      </div>
+  </div>
+    <div class="lg:flex lg:flex-row py-5">
+        <div class="lg:w-1/5 w-full">
+            <h1 class="text-2xl text-sky-600">YouTube</h1>
+        </div>
+        <div class="lg:w-4/5 w-full">
+          <p>Beyond the realm of technology, I find joy in surfing, quality family time, adventurous pursuits, and exploring new destinations. I'm excited to share my DIY projects, travel escapades, thrilling surfing adventures, and more through <a class="text-sky-600" href="{% url 'blog:blog' %}">My Blog</a> and <a class="text-sky-600" href="https://m.youtube.com/kevpwhite" target="_blank">YouTube Channel.</a> If you're interested in technology-related content, don't forget to check out the <a class="text-sky-600" href="https://www.youtube.com/@techprohq" target="_blank">Tech Pro HQ channel.</a> Videography has rapidly evolved into a personal passion, allowing me to capture life's moments both online and offline. You could say I'm riding the waves of life, both in the ocean and on the web!</p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-sky-600 -mb-12">
+    <div id="contact-me" class="container mx-auto p-10">
+      <h1 class="text-4xl text-center text-white">Get In Touch</h1>
+      <p class="text-center text-white">Let's Get Started</p>
+      <div class="lg:flex lg:flex-row py-5">
+        <div class="shadow-xl shadow-black rounded-md p-5 lg:mx-10 bg-white w-full lg:w-1/2">
+          <h2 class="text-xl pb-4">Let's Connect</h2>
+          <div class="grid grid-cols-2 gap-1 pb-6">
+            <div class="mb-8 mx-auto">
+              <svg
+              class="w-24"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+              role="img"
+              viewBox="0 10 496 512"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+                <a href="https://youtube.com/kevpwhite" target="_blank">  
+                  <ellipse
+                  style="fill:#1a1a1a;fill-opacity:0;stroke:#000000;stroke-width:10.24;stroke-dasharray:none;stroke-opacity:1"
+                  id="path1639"
+                  cx="248"
+                  cy="266"
+                  rx="211.66457"
+                  ry="211.66458" /><g
+                  id="g3955"
+                  style="fill:#000000"><path
+                    d="m 6.3204111e28,-1.4410389e30 c 1.57574099e29,-2.4057e27 3.13945299e29,-1.2028e27 4.70316499e29,-2.4057e27 9.6228e27,1.840369e29 7.57799e28,3.716824e29 2.104997e29,5.0159074e29 1.347198e29,1.3351695e29 3.2477089e29,1.9486258e29 5.1001069e29,2.1531112e29 v 4.8475072e29 c -1.732112e29,-6.01427e27 -3.4762529e29,-4.209994e28 -5.0519929e29,-1.1667697e29 -6.85628e28,-3.127424e28 -1.323141e29,-7.096847e28 -1.948626e29,-1.1186555e29 -1.2028e27,3.5123378e29 1.2029e27,7.0246755e29 -2.4057e27,1.05249847e30 -9.6228e27,1.6839976e29 -6.49542e28,3.3559671e29 -1.623855e29,4.7392497e29 -1.57574e29,2.309483e29 -4.30622199e29,3.813052e29 -7.108875e29,3.861166e29 -1.720083e29,9.6228e27 -3.440167e29,-3.72885e28 -4.90765e29,-1.238941e29 -2.4297681e29,-1.431398e29 -4.1378231e29,-4.0536226e29 -4.3904221e29,-6.8683039e29 -2.4058e27,-6.014277e28 -3.6086e27,-1.2028554e29 -1.2029e27,-1.7922546e29 2.16514e28,-2.2854253e29 1.347198e29,-4.474622112e29 3.1033671e29,-5.9661628e29 1.99674e29,-1.7321118e29 4.787364e29,-2.562082e29 7.397561e29,-2.0689113e29 2.4057e27,1.780226e29 -4.8115e27,3.560451988e29 -4.8115e27,5.340678e29 -1.190826e29,-3.849137e28 -2.586139e29,-2.766567e28 -3.632623e29,4.450565e28 -7.57799e28,4.931707e28 -1.335169e29,1.2509696e29 -1.635883e29,2.104997e29 -2.526e28,6.134562e28 -1.80429e28,1.2870552e29 -1.684e28,1.9365972e29 2.88685e28,1.9726833e29 2.189197e29,3.6326233e29 4.209994e29,3.4521953e29 1.347198e29,-1.2029e27 2.63425301e29,-7.93885e28 3.331909008e29,-1.936598e29 2.28543002e28,-3.969418e28 4.81143002e28,-8.059127e28 4.93171002e28,-1.2750263e29 1.20286e28,-2.1531111e29 7.2171e27,-4.2941937e29 8.42e27,-6.44730491e29 1.2029e27,-4.84750729e29 -1.2029e27,-9.68298599e29 2.4057e27,-1.451846519e30 z"
+                    fill="currentColor"
+                    id="path6303"
+                    style="stroke-width:1.20286e+29" /><g
+                    id="g12527"
+                    transform="matrix(4.0313401,0,0,4.0313401,113.5669,136.98656)"
+                    style="fill:#000000"><g
+                      id="g11752"
+                      style="fill:#000000"><path
+                        data-name="layer2"
+                        d="m 39.933,6.027 v 14.051 a 7.659,7.659 0 0 0 0.329,2.635 1.972,1.972 0 0 0 2.086,1.317 c 1.208,0 2.415,-0.768 3.623,-2.2 v 1.976 h 3.293 V 6.027 h -3.293 v 13.612 c -0.768,0.988 -1.427,1.537 -2.086,1.537 -0.439,0 -0.659,-0.22 -0.768,-0.768 V 6.027 Z M 32.468,24.14 A 4.341,4.341 0 0 0 36.2,22.274 7.08,7.08 0 0 0 37.188,18.102 V 11.845 A 7.08,7.08 0 0 0 36.2,7.673 4.48,4.48 0 0 0 32.468,5.807 4.341,4.341 0 0 0 28.736,7.673 7.08,7.08 0 0 0 27.748,11.845 V 18.1 a 7.08,7.08 0 0 0 0.988,4.172 4.48,4.48 0 0 0 3.732,1.868 z M 30.931,11.186 c 0,-1.647 0.549,-2.415 1.537,-2.415 0.988,0 1.537,0.768 1.537,2.415 v 7.465 c 0,1.647 -0.549,2.525 -1.537,2.525 -0.988,0 -1.537,-0.878 -1.537,-2.525 z M 23.357,23.92 V 14.26 L 27.638,-0.011 H 24.015 L 21.6,9.32 19.075,-0.011 H 15.343 C 16,1.965 16.77,4.16 17.648,6.685 a 65.168,65.168 0 0 1 2.2,7.575 v 9.66 z"
+                        fill="#202020"
+                        id="path11258"
+                        style="fill:#000000" /><path
+                        data-name="layer1"
+                        d="M 56.729,29.519 A 6.09,6.09 0 0 0 53.106,27.872 C 48.715,27.433 42.128,27.104 33.346,27.104 a 176.435,176.435 0 0 0 -19.76,0.768 6.9,6.9 0 0 0 -3.623,1.647 6.453,6.453 0 0 0 -2.086,3.513 C 7.22,35.776 7,39.948 7,45.546 a 67.519,67.519 0 0 0 0.878,12.515 6.453,6.453 0 0 0 2.086,3.513 6.09,6.09 0 0 0 3.623,1.647 176.435,176.435 0 0 0 19.76,0.768 175.145,175.145 0 0 0 19.76,-0.768 5.563,5.563 0 0 0 3.623,-1.647 6.453,6.453 0 0 0 2.086,-3.513 c 0.659,-2.744 0.878,-6.916 0.878,-12.515 A 67.519,67.519 0 0 0 58.816,33.031 6.727,6.727 0 0 0 56.729,29.519 Z m -34.8,7.136 H 18.087 V 56.963 H 14.465 V 36.654 h -3.733 v -3.4 H 21.82 v 3.4 z M 31.48,56.963 H 28.3 v -1.976 c -1.317,1.427 -2.525,2.2 -3.623,2.2 A 1.972,1.972 0 0 1 22.591,55.87 7.659,7.659 0 0 1 22.262,53.235 V 39.289 h 3.293 V 53.45 c 0.11,0.549 0.329,0.768 0.768,0.768 0.659,0 1.317,-0.549 2.086,-1.537 V 39.289 h 3.181 z m 12.185,-5.379 a 11.8,11.8 0 0 1 -0.329,3.513 2.465,2.465 0 0 1 -2.525,1.976 4.5,4.5 0 0 1 -3.293,-1.973 v 1.756 h -3.184 v -23.6 h 3.184 v 7.794 a 4.158,4.158 0 0 1 3.293,-1.976 2.465,2.465 0 0 1 2.525,1.976 12.319,12.319 0 0 1 0.329,3.513 z M 55.741,48.73 h -6.367 v 3.07 c 0,1.647 0.549,2.415 1.647,2.415 0.768,0 1.208,-0.439 1.427,-1.317 0,-0.22 0.11,-0.988 0.11,-2.2 h 3.293 v 0.439 a 7.923,7.923 0 0 1 -0.11,2.086 4.931,4.931 0 0 1 -0.768,1.976 4.888,4.888 0 0 1 -7.684,0 7.08,7.08 0 0 1 -0.988,-4.172 v -6.139 a 7.08,7.08 0 0 1 0.988,-4.172 4.541,4.541 0 0 1 3.841,-1.866 4.341,4.341 0 0 1 3.732,1.866 7.08,7.08 0 0 1 0.988,4.172 l -0.11,3.842 z"
+                        fill="#202020"
+                        id="path11260"
+                        style="fill:#000000" /></g><path
+                      data-name="layer1"
+                      d="m 50.911,41.924 c -1.1,0 -1.647,0.768 -1.647,2.415 v 1.647 h 3.184 V 44.339 C 52.557,42.8 52.009,41.924 50.911,41.924 Z m -11.856,0 a 2.287,2.287 0 0 0 -1.647,0.768 V 53.45 a 2.287,2.287 0 0 0 1.647,0.768 c 0.878,0 1.427,-0.768 1.427,-2.415 v -7.574 c 0,-1.429 -0.439,-2.305 -1.427,-2.305 z"
+                      fill="#202020"
+                      id="path11262"
+                      style="fill:#000000" /></g></g>
+                </a>
+              </svg>
+              <a href="https://youtube.com/kevpwhite" target="_blank" class="hidden xl:block">
+                <span class="hidden xl:block -mt-16 ml-24">@kevpwhite</span>
+              </a>
+            </div>
+            <div class="mb-8 mx-auto">
+                    <svg
+                    class="w-24"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fab"
+                    data-icon="github"
+                    role="img"
+                    viewBox="0 10 496 512"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:svg="http://www.w3.org/2000/svg">
+                    <a href="https://facebook.com/kevpwhite" target="_blank">
+                      <ellipse
+                        style="fill:#1a1a1a;fill-opacity:0;stroke:#000000;stroke-width:10.24;stroke-dasharray:none;stroke-opacity:1"
+                        id="path1639"
+                        cx="248"
+                        cy="266"
+                        rx="211.66457"
+                        ry="211.66458" />
+                      <path
+                      d="m 6.3204111e28,-1.4410389e30 c 1.57574099e29,-2.4057e27 3.13945299e29,-1.2028e27 4.70316499e29,-2.4057e27 9.6228e27,1.840369e29 7.57799e28,3.716824e29 2.104997e29,5.0159074e29 1.347198e29,1.3351695e29 3.2477089e29,1.9486258e29 5.1001069e29,2.1531112e29 v 4.8475072e29 c -1.732112e29,-6.01427e27 -3.4762529e29,-4.209994e28 -5.0519929e29,-1.1667697e29 -6.85628e28,-3.127424e28 -1.323141e29,-7.096847e28 -1.948626e29,-1.1186555e29 -1.2028e27,3.5123378e29 1.2029e27,7.0246755e29 -2.4057e27,1.05249847e30 -9.6228e27,1.6839976e29 -6.49542e28,3.3559671e29 -1.623855e29,4.7392497e29 -1.57574e29,2.309483e29 -4.30622199e29,3.813052e29 -7.108875e29,3.861166e29 -1.720083e29,9.6228e27 -3.440167e29,-3.72885e28 -4.90765e29,-1.238941e29 -2.4297681e29,-1.431398e29 -4.1378231e29,-4.0536226e29 -4.3904221e29,-6.8683039e29 -2.4058e27,-6.014277e28 -3.6086e27,-1.2028554e29 -1.2029e27,-1.7922546e29 2.16514e28,-2.2854253e29 1.347198e29,-4.474622112e29 3.1033671e29,-5.9661628e29 1.99674e29,-1.7321118e29 4.787364e29,-2.562082e29 7.397561e29,-2.0689113e29 2.4057e27,1.780226e29 -4.8115e27,3.560451988e29 -4.8115e27,5.340678e29 -1.190826e29,-3.849137e28 -2.586139e29,-2.766567e28 -3.632623e29,4.450565e28 -7.57799e28,4.931707e28 -1.335169e29,1.2509696e29 -1.635883e29,2.104997e29 -2.526e28,6.134562e28 -1.80429e28,1.2870552e29 -1.684e28,1.9365972e29 2.88685e28,1.9726833e29 2.189197e29,3.6326233e29 4.209994e29,3.4521953e29 1.347198e29,-1.2029e27 2.63425301e29,-7.93885e28 3.331909008e29,-1.936598e29 2.28543002e28,-3.969418e28 4.81143002e28,-8.059127e28 4.93171002e28,-1.2750263e29 1.20286e28,-2.1531111e29 7.2171e27,-4.2941937e29 8.42e27,-6.44730491e29 1.2029e27,-4.84750729e29 -1.2029e27,-9.68298599e29 2.4057e27,-1.451846519e30 z"
+                      fill="currentColor"
+                      id="path6303"
+                      style="stroke-width:1.20286e+29" />
+                      <path
+                      fill="currentColor"
+                      d="m 314.84954,283.95523 7.97886,-51.9916 h -49.88747 v -33.73899 c 0,-14.2239 6.96887,-28.0887 29.3119,-28.0887 h 22.6797 V 125.8707 c 0,0 -20.58118,-3.51249 -40.25899,-3.51249 -41.08379,0 -67.93807,24.90165 -67.93807,69.98049 v 39.62493 h -45.668 v 51.9916 h 45.668 v 125.68656 h 56.20546 V 283.95523 Z"
+                      id="path10348"
+                      style="stroke-width:0.5611" />
+                    </a>
+                 </svg>
+              <a href="https://facebook.com/kevpwhite" target="_blank" class="hidden xl:block">
+                <span class="hidden xl:block -mt-16 ml-24">@kevpwhite</span>
+              </a>
+            </div>
+            <div class="mb-8 mx-auto">
+              <svg
+              class="w-24"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+              role="img"
+              viewBox="0 10 496 512"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+              <a href="https://instagram.com/kevpwhite" target="_blank">
+                <ellipse
+                style="fill:#1a1a1a;fill-opacity:0;stroke:#000000;stroke-width:10.24;stroke-dasharray:none;stroke-opacity:1"
+                id="path1639"
+                cx="248"
+                cy="266"
+                rx="211.66457"
+                ry="211.66458" />
+                <path
+                d="m 6.3204111e28,-1.4410389e30 c 1.57574099e29,-2.4057e27 3.13945299e29,-1.2028e27 4.70316499e29,-2.4057e27 9.6228e27,1.840369e29 7.57799e28,3.716824e29 2.104997e29,5.0159074e29 1.347198e29,1.3351695e29 3.2477089e29,1.9486258e29 5.1001069e29,2.1531112e29 v 4.8475072e29 c -1.732112e29,-6.01427e27 -3.4762529e29,-4.209994e28 -5.0519929e29,-1.1667697e29 -6.85628e28,-3.127424e28 -1.323141e29,-7.096847e28 -1.948626e29,-1.1186555e29 -1.2028e27,3.5123378e29 1.2029e27,7.0246755e29 -2.4057e27,1.05249847e30 -9.6228e27,1.6839976e29 -6.49542e28,3.3559671e29 -1.623855e29,4.7392497e29 -1.57574e29,2.309483e29 -4.30622199e29,3.813052e29 -7.108875e29,3.861166e29 -1.720083e29,9.6228e27 -3.440167e29,-3.72885e28 -4.90765e29,-1.238941e29 -2.4297681e29,-1.431398e29 -4.1378231e29,-4.0536226e29 -4.3904221e29,-6.8683039e29 -2.4058e27,-6.014277e28 -3.6086e27,-1.2028554e29 -1.2029e27,-1.7922546e29 2.16514e28,-2.2854253e29 1.347198e29,-4.474622112e29 3.1033671e29,-5.9661628e29 1.99674e29,-1.7321118e29 4.787364e29,-2.562082e29 7.397561e29,-2.0689113e29 2.4057e27,1.780226e29 -4.8115e27,3.560451988e29 -4.8115e27,5.340678e29 -1.190826e29,-3.849137e28 -2.586139e29,-2.766567e28 -3.632623e29,4.450565e28 -7.57799e28,4.931707e28 -1.335169e29,1.2509696e29 -1.635883e29,2.104997e29 -2.526e28,6.134562e28 -1.80429e28,1.2870552e29 -1.684e28,1.9365972e29 2.88685e28,1.9726833e29 2.189197e29,3.6326233e29 4.209994e29,3.4521953e29 1.347198e29,-1.2029e27 2.63425301e29,-7.93885e28 3.331909008e29,-1.936598e29 2.28543002e28,-3.969418e28 4.81143002e28,-8.059127e28 4.93171002e28,-1.2750263e29 1.20286e28,-2.1531111e29 7.2171e27,-4.2941937e29 8.42e27,-6.44730491e29 1.2029e27,-4.84750729e29 -1.2029e27,-9.68298599e29 2.4057e27,-1.451846519e30 z"
+                fill="currentColor"
+                id="path6303"
+                style="stroke-width:1.20286e+29" />
+                <path
+                data-name="layer1"
+                d="m 163.33027,152.15836 h 169.33944 a 28.421277,28.421277 0 0 1 29.17194,29.17192 v 169.33944 a 28.421277,28.421277 0 0 1 -29.17194,29.17192 H 163.33027 A 28.421277,28.421277 0 0 1 134.15835,350.66972 V 181.33028 a 28.421277,28.421277 0 0 1 29.17192,-29.17192 z m 136.60997,25.25861 a 10.316899,10.316899 0 0 0 -10.3169,10.3169 v 24.5471 a 10.316899,10.316899 0 0 0 10.3169,10.3169 h 25.61437 a 10.316899,10.316899 0 0 0 10.3169,-10.3169 v -24.5471 a 10.316899,10.316899 0 0 0 -10.3169,-10.3169 z m 36.28703,71.15103 h -19.92229 a 70.290098,70.290098 0 0 1 2.84604,19.56653 c 0,37.71004 -31.66221,68.66074 -70.79527,68.66074 -39.13306,0 -70.79527,-30.59494 -70.79527,-68.66074 a 70.290098,70.290098 0 0 1 2.84604,-19.56653 h -20.98955 v 96.05388 a 8.8084969,8.8084969 0 0 0 8.89388,8.89388 h 158.66678 a 8.8084969,8.8084969 0 0 0 8.89388,-8.89388 z m -87.87152,-27.39315 a 45.262725,45.262725 0 0 0 -45.89241,44.46939 44.967448,44.967448 0 0 0 45.89241,44.11364 45.262725,45.262725 0 0 0 45.89241,-44.46939 44.967448,44.967448 0 0 0 -45.89241,-44.11364 z"
+                fill="#202020"
+                id="path9079"
+                style="fill:#000000;stroke-width:3.55755" />
+                </a>
+              </svg>
+              <a href="https://instagram.com/kevpwhite" target="_blank" class="hidden xl:block">
+                  <span class="hidden xl:block -mt-16 ml-24">@kevpwhite</span>
+              </a>
+            </div>
+            <div class="mb-8 mx-auto">
+              <svg
+              class="w-24"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+              role="img"
+              viewBox="0 10 496 512"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+              <a href="https://www.tiktok.com/@kevpwhite?_d=secCgsIARCbDRgBIAIoARI%2BCjwinN1ebUDqTfPWoXFnDZtXggUTdTQ2SfEWaA6D4TaNxW0nfVwu6PDK3uuVXGGCSMqvR9JDwxo9NbrKsUYaAA%3D%3D&language=en&sec_uid=MS4wLjABAAAAOa9tKztt-PdWFW1KbbT6b0i6KA9rZaQG9ClC1W2fj52qpmQqbzJ-q0NFu0G3-QRy&sec_user_id=MS4wLjABAAAAOa9tKztt-PdWFW1KbbT6b0i6KA9rZaQG9ClC1W2fj52qpmQqbzJ-q0NFu0G3-QRy&share_app_name=musically&share_author_id=6648393449635479558&share_link_id=c059760d-1e1e-4bf4-bf34-71cfa7c67c4f&timestamp=1608340121&u_code=d48fa4dd6j9g0i&user_id=6648393449635479558&utm_campaign=client_share&utm_medium=android&utm_source=copy&source=h5_m&_r=1" target="_blank">
+                   <ellipse
+                   style="fill:#1a1a1a;fill-opacity:0;stroke:#000000;stroke-width:10.24;stroke-dasharray:none;stroke-opacity:1"
+                   id="path1639"
+                   cx="248"
+                   cy="266"
+                   rx="211.66457"
+                   ry="211.66458" />
+                   <path
+                   d="m 6.3204111e28,-1.4410389e30 c 1.57574099e29,-2.4057e27 3.13945299e29,-1.2028e27 4.70316499e29,-2.4057e27 9.6228e27,1.840369e29 7.57799e28,3.716824e29 2.104997e29,5.0159074e29 1.347198e29,1.3351695e29 3.2477089e29,1.9486258e29 5.1001069e29,2.1531112e29 v 4.8475072e29 c -1.732112e29,-6.01427e27 -3.4762529e29,-4.209994e28 -5.0519929e29,-1.1667697e29 -6.85628e28,-3.127424e28 -1.323141e29,-7.096847e28 -1.948626e29,-1.1186555e29 -1.2028e27,3.5123378e29 1.2029e27,7.0246755e29 -2.4057e27,1.05249847e30 -9.6228e27,1.6839976e29 -6.49542e28,3.3559671e29 -1.623855e29,4.7392497e29 -1.57574e29,2.309483e29 -4.30622199e29,3.813052e29 -7.108875e29,3.861166e29 -1.720083e29,9.6228e27 -3.440167e29,-3.72885e28 -4.90765e29,-1.238941e29 -2.4297681e29,-1.431398e29 -4.1378231e29,-4.0536226e29 -4.3904221e29,-6.8683039e29 -2.4058e27,-6.014277e28 -3.6086e27,-1.2028554e29 -1.2029e27,-1.7922546e29 2.16514e28,-2.2854253e29 1.347198e29,-4.474622112e29 3.1033671e29,-5.9661628e29 1.99674e29,-1.7321118e29 4.787364e29,-2.562082e29 7.397561e29,-2.0689113e29 2.4057e27,1.780226e29 -4.8115e27,3.560451988e29 -4.8115e27,5.340678e29 -1.190826e29,-3.849137e28 -2.586139e29,-2.766567e28 -3.632623e29,4.450565e28 -7.57799e28,4.931707e28 -1.335169e29,1.2509696e29 -1.635883e29,2.104997e29 -2.526e28,6.134562e28 -1.80429e28,1.2870552e29 -1.684e28,1.9365972e29 2.88685e28,1.9726833e29 2.189197e29,3.6326233e29 4.209994e29,3.4521953e29 1.347198e29,-1.2029e27 2.63425301e29,-7.93885e28 3.331909008e29,-1.936598e29 2.28543002e28,-3.969418e28 4.81143002e28,-8.059127e28 4.93171002e28,-1.2750263e29 1.20286e28,-2.1531111e29 7.2171e27,-4.2941937e29 8.42e27,-6.44730491e29 1.2029e27,-4.84750729e29 -1.2029e27,-9.68298599e29 2.4057e27,-1.451846519e30 z"
+                   fill="currentColor"
+                   id="path6303"
+                   style="stroke-width:1.20286e+29" />
+                   <path
+                   d="m 253.38062,143.32326 c 13.4144,-0.2048 26.7264,-0.1024 40.0384,-0.2048 0.8192,15.6672 6.4512,31.6416 17.92,42.7008 11.4688,11.3664 27.648,16.5888 43.4176,18.3296 v 41.2672 c -14.7456,-0.512 -29.5936,-3.584 -43.008,-9.9328 -5.8368,-2.6624 -11.264,-6.0416 -16.5888,-9.5232 -0.1024,29.9008 0.1024,59.8016 -0.2048,89.6 -0.8192,14.336 -5.5296,28.5696 -13.824,40.3456 -13.4144,19.6608 -36.6592,32.4608 -60.5184,32.8704 -14.6432,0.8192 -29.2864,-3.1744 -41.7792,-10.5472 -20.6848,-12.1856 -35.2256,-34.5088 -37.376,-58.4704 -0.2048,-5.12 -0.3072,-10.24 -0.1024,-15.2576 1.8432,-19.456 11.4688,-38.0928 26.4192,-50.7904 16.9984,-14.7456 40.7552,-21.8112 62.976,-17.6128 0.2048,15.1552 -0.4096,30.3104 -0.4096,45.4656 -10.1376,-3.2768 -22.016,-2.3552 -30.9248,3.7888 -6.4512,4.1984 -11.3664,10.6496 -13.9264,17.92 -2.1504,5.2224 -1.536,10.9568 -1.4336,16.4864 2.4576,16.7936 18.6368,30.9248 35.84,29.3888 11.4688,-0.1024 22.4256,-6.7584 28.3648,-16.4864 1.9456,-3.3792 4.096,-6.8608 4.1984,-10.8544 1.024,-18.3296 0.6144,-36.5568 0.7168,-54.8864 0.1024,-41.2672 -0.1024,-82.432 0.2048,-123.5968 z"
+                   fill="currentColor"
+                   id="path7808"
+                   style="stroke-width:10.24" />
+               </a>
+              </svg>
+              <a href="https://www.tiktok.com/@kevpwhite?_d=secCgsIARCbDRgBIAIoARI%2BCjwinN1ebUDqTfPWoXFnDZtXggUTdTQ2SfEWaA6D4TaNxW0nfVwu6PDK3uuVXGGCSMqvR9JDwxo9NbrKsUYaAA%3D%3D&language=en&sec_uid=MS4wLjABAAAAOa9tKztt-PdWFW1KbbT6b0i6KA9rZaQG9ClC1W2fj52qpmQqbzJ-q0NFu0G3-QRy&sec_user_id=MS4wLjABAAAAOa9tKztt-PdWFW1KbbT6b0i6KA9rZaQG9ClC1W2fj52qpmQqbzJ-q0NFu0G3-QRy&share_app_name=musically&share_author_id=6648393449635479558&share_link_id=c059760d-1e1e-4bf4-bf34-71cfa7c67c4f&timestamp=1608340121&u_code=d48fa4dd6j9g0i&user_id=6648393449635479558&utm_campaign=client_share&utm_medium=android&utm_source=copy&source=h5_m&_r=1" target="_blank" class="hidden xl:block">
+                  <span class="hidden xl:block -mt-16 ml-24">@kevpwhite</span>
+              </a>
+            </div>
+            <div class="mb-8 mx-auto">
+              <svg
+              class="w-24"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+              role="img"
+              viewBox="0 10 496 512"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+                <a href="https://www.linkedin.com/in/kevpwhite/" target="_blank">
+                  <ellipse
+                      style="fill:#1a1a1a;fill-opacity:0;stroke:#000000;stroke-width:10.24;stroke-dasharray:none;stroke-opacity:1"
+                      id="path1639"
+                      cx="248"
+                      cy="266"
+                      rx="211.66457"
+                      ry="211.66458" />
+                  <path
+                      data-name="layer1"
+                      fill="#202020"
+                      stroke="#202020"
+                      stroke-linecap="round"
+                      stroke-miterlimit="10"
+                      stroke-width="8.38711"
+                      d="m 138.03587,220.6303 h 51.11105 v 154.50733 h -51.11105 z"
+                      stroke-linejoin="round"
+                      id="path2691"
+                      style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+                  <path
+                      data-name="layer2"
+                      d="m 321.04679,215.51836 c -22.41035,0 -35.77521,8.25711 -49.92846,26.33971 V 220.6303 h -51.11104 v 154.50733 h 51.50104 v -83.74109 c 0,-17.69261 9.04131,-34.99102 29.48488,-34.99102 20.44358,0 32.63005,17.29841 32.63005,34.59682 v 84.13529 h 51.50524 v -87.67045 c 0,-60.94074 -41.28135,-71.94882 -64.08171,-71.94882 z"
+                      fill="#202020"
+                      stroke="#202020"
+                      stroke-linecap="round"
+                      stroke-miterlimit="10"
+                      stroke-width="8.38711"
+                      stroke-linejoin="round"
+                      id="path2693"
+                      style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+                  <path
+                      data-name="layer1"
+                      d="m 163.78849,145.54051 c -16.90422,0 -30.27327,12.18647 -30.27327,27.12811 0,14.94163 13.36905,27.1281 30.27327,27.1281 16.90422,0 30.27327,-12.18647 30.27327,-27.1281 0,-14.94164 -13.36905,-27.12811 -30.27327,-27.12811 z"
+                      fill="#202020"
+                      stroke="#202020"
+                      stroke-linecap="round"
+                      stroke-miterlimit="10"
+                      stroke-width="8.38711"
+                      stroke-linejoin="round"
+                      id="path2695"
+                      style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+                </a>
+              </svg>
+              <a href="https://www.linkedin.com/in/kevpwhite/" target="_blank" class="hidden xl:block">
+                <span class="hidden xl:block -mt-16 ml-24">@kevpwhite</span>
+              </a>              
+            </div>
+
+            <div class="mb-8 mx-auto">
+              <svg
+              class="w-24"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+              role="img"
+              viewBox="0 10 496 512"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+              <a href="https://github.com/kevpwhite" target="_blank">  
+                <path
+                    fill="currentColor"
+                    d="m 193.17774,364.55739 c 0,1.3355 -1.53583,2.4039 -3.4723,2.4039 -2.20358,0.20033 -3.7394,-0.86807 -3.7394,-2.4039 0,-1.33549 1.53582,-2.40389 3.4723,-2.40389 2.00325,-0.20033 3.7394,0.86807 3.7394,2.40389 z m -20.76702,-3.00487 c -0.46743,1.3355 0.86807,2.87132 2.87132,3.27197 1.73615,0.66775 3.7394,0 4.14005,-1.33549 0.40065,-1.3355 -0.86808,-2.87133 -2.87133,-3.4723 -1.73614,-0.46743 -3.67262,0.20032 -4.14004,1.53582 z m 29.51454,-1.13517 c -1.93648,0.46742 -3.27197,1.73615 -3.07165,3.27197 0.20033,1.3355 1.93647,2.20357 3.93972,1.73615 1.93648,-0.46743 3.27198,-1.73615 3.07165,-3.07165 -0.20032,-1.26872 -2.00325,-2.1368 -3.93972,-1.93647 z M 245.8632,104.5356 c -92.61691,0 -163.46517,70.31406 -163.46517,162.93096 0,74.05346 46.60894,137.42293 113.18361,159.72577 8.54719,1.53583 11.55207,-3.7394 11.55207,-8.07977 0,-4.14005 -0.20033,-26.9771 -0.20033,-40.99984 0,0 -46.74249,10.01624 -56.55841,-19.89895 0,0 -7.61235,-19.43152 -18.56345,-24.43964 0,0 -15.29147,-10.48368 1.0684,-10.28335 0,0 16.62698,1.3355 25.77515,17.22794 14.62372,25.77515 39.13014,18.36313 48.67896,13.95598 1.53583,-10.684 5.8762,-18.09602 10.684,-22.50317 -37.32722,-4.14005 -74.98831,-9.54883 -74.98831,-73.78636 0,-18.36312 5.0749,-27.57807 15.7589,-39.33047 -1.73615,-4.34037 -7.41202,-22.23607 1.73615,-45.34022 13.95597,-4.34037 46.07474,18.02925 46.07474,18.02925 13.355,-3.7394 27.71162,-5.67587 41.93469,-5.67587 14.22307,0 28.57969,1.93647 41.93469,5.67587 0,0 32.11877,-22.43639 46.07474,-18.02925 9.14817,23.17092 3.4723,40.99985 1.73615,45.34022 10.684,11.81917 17.22795,21.03412 17.22795,39.33047 0,64.43786 -39.33047,69.57953 -76.65769,73.78636 6.1433,5.27522 11.35175,15.29147 11.35175,30.98359 0,22.50317 -0.20032,50.34834 -0.20032,55.82389 0,4.34037 3.07165,9.6156 11.55207,8.07977 66.77499,-22.16929 112.04843,-85.53876 112.04843,-159.59222 0,-92.6169 -75.12186,-162.93096 -167.73877,-162.93096 z m -98.55988,230.30693 c -0.86807,0.66775 -0.66775,2.20357 0.46743,3.4723 1.0684,1.0684 2.60422,1.53582 3.4723,0.66775 0.86807,-0.66775 0.66774,-2.20358 -0.46743,-3.4723 -1.0684,-1.0684 -2.60422,-1.53583 -3.4723,-0.66775 z m -7.2117,-5.40878 c -0.46742,0.86808 0.20033,1.93648 1.53583,2.60423 1.0684,0.66775 2.4039,0.46742 2.87132,-0.46743 0.46743,-0.86807 -0.20032,-1.93647 -1.53582,-2.60422 -1.3355,-0.40065 -2.4039,-0.20033 -2.87133,0.46742 z m 21.6351,23.7719 c -1.0684,0.86807 -0.66775,2.87132 0.86807,4.14005 1.53583,1.53582 3.4723,1.73615 4.34038,0.66775 0.86807,-0.86808 0.46742,-2.87133 -0.86808,-4.14005 -1.46905,-1.53583 -3.4723,-1.73615 -4.34037,-0.66775 z m -7.61235,-9.81593 c -1.0684,0.66775 -1.0684,2.4039 0,3.93973 1.0684,1.53582 2.87132,2.20357 3.7394,1.53582 1.0684,-0.86807 1.0684,-2.60422 0,-4.14005 -0.93485,-1.53582 -2.671,-2.20357 -3.7394,-1.3355 z"
+                    id="path1108"
+                    style="stroke-width:0.66775" />
+                <ellipse
+                    style="fill:#1a1a1a;fill-opacity:0;stroke:#000000;stroke-width:10.24;stroke-dasharray:none;stroke-opacity:1"
+                    id="path1639"
+                    cx="248"
+                    cy="266"
+                    rx="211.66457"
+                    ry="211.66458" />
+              </a>
+              </svg>
+              <a href="https://github.com/kevpwhite" target="_blank" class="hidden xl:block">
+                <span class="hidden xl:block -mt-16 ml-24">@kevpwhite</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-xl shadow-black rounded-md p-5 lg:mx-5 bg-white w-full mt-10 lg:mt-0 lg:w-1/2">
+          {% if note %}
+          <div class="bg-green-100 rounded-lg py-5 px-6 mb-4 text-base text-green-700 mb-3">
+              {{ note }}
+          </div>
+          {% endif %}
+          {% if failnote %}
+          <div class="bg-red-100 rounded-lg py-5 px-6 mb-4 text-base text-red-700 mb-3">
+          {{ failnote }}
+          </div>
+          {% endif %}         
+
+          <h2 class="text-xl pb-2">Send Me a Email</h2>
+          <form action="" method="post">
+            {% csrf_token %}
+              {% for field in form %}
+              {% render_honeypot_field %}
+              <div class="form-group mb-6">
+                {% if form.errors %}
+                  {% for error in field.errors %}<div class="bg-red-100 rounded-lg py-5 px-6 mb-4 text-base text-red-700 mb-3" role="alert">{{ error }}</div>{% endfor %}
+                {% endif %}
+                {{ field.label_tag }}{{ field }}
+                  {% if field.help_text %}
+                    <p class="bg-yellow-100 rounded-lg py-5 px-6 mb-4 text-base text-yellow-700 mb-3">{{ field.help_text|safe }}</p>
+                  {% endif %}
+              </div>
+            {% endfor %}
+            <input type="submit" value="Submit" class="w-full px-6 py-2.5 bg-sky-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-sky-500 hover:shadow-lg focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-500 active:shadow-lg transition duration-300 ease-in-out">
+          </form>
+          <!-- This DIV is here for the purpose of adding classes to NPM RUN BUILD Tailwinds.css for the form. It is added in via the widget. -->
+          <div class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none hidden"></div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

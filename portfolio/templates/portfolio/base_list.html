@@ -1,0 +1,12 @@
+<a href="{% url 'portfolio:portfolio-detail' portfolio.slug %}">
+  <div class="flex justify-center pb-10 mb-10 lg:mb-0">
+      <div class="rounded-lg border-sky-600 shadow-2xl bg-white text-center">
+          <img class="rounded-t-lg" src="{{ portfolio.images.url }}" alt="{{ portfolio.images.alt }}"/>
+        <div class="p-6">
+          <h2 class="text-gray-900 text-lg font-medium">{{portfolio.title}}</h2>
+        </div>
+      </div>
+  </div>
+</a>
+
+

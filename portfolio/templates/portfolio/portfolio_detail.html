@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% comment %} ----------------offcanvas start-------------------- {% endcomment %}
+<div class="animate__animated animate__fadeInUp flex-grow pt-4 overflow-y-auto small min-h-screen container mx-auto p-8 lg:px-20">
+    <div class="flex justify-center">
+        <div class="bg-white">
+          <div class="rounded-lg m-auto">
+            <img class="w-full object-contain object-center rounded-lg shadow-2xl" src="{{ portfolio.images.url }}" alt="{{ portfolio.title }}" />
+          </div>
+          <div class="py-6 justify-start">
+              <h1 class="text-4xl mb-4">{{ portfolio.title }}</h1>
+              {{portfolio.description | safe | linebreaksbr }}
+            <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+              <div class="carousel-inner relative w-full overflow-hidden">
+                {% for portfolioimage in portfolio.portfolioimages.all %}
+                  <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %} relative float-left w-full">
+                    <div class="rounded-lg shadow-2xl relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
+                      <img src="{{portfolioimage.images.url}}" alt="{{portfolioimage.images_alt_tag}}" class="block w-full" />
+                      <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-25"></div>
+                    </div>
+                    <div class="carousel-caption hidden md:block absolute text-center">
+                      <h3 class="text-4xl">{{portfolioimage.images_alt_tag}}</h3>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>{% comment %} ----------------end of slider{% endcomment %}        
+          </div>
+        </div>
+      </div>
+    </div>           
+</div>{% comment %} ----------------offcanvas end{% endcomment %}  
+
+{% endblock %}
