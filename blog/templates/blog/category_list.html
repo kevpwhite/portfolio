@@ -3,13 +3,17 @@
 {% block content %}
 
 <div class="animate__animated animate__fadeInUp container mx-auto p-8 lg:px-20">
-  <h1 class="text-center text-4xl my-6">{{ category }}</h1>
+  <h1 class="text-center text-4xl my-6">Category: {{ category }}</h1>
   {% if object_list %}
-    <div class="mx-auto min-h-screen lg:grid lg:grid-cols-3 lg:gap-8">
+
+  <section class="mx-auto lg:grid lg:grid-cols-3 lg:gap-8">
+    <div>
       {% for post in categories %}
         {% include 'blog/base_list.html' %}
       {% endfor %}
-    </div>{% comment %}----------end grid {% endcomment %}
+    </div>
+  </section>
+
   {% else %}
     <div class="mx-auto min-h-screen">
       <h6 class="text-center text-2xl">Sorry, nothing has been posted yet!</h6>

@@ -1,11 +1,13 @@
-<a href="{% url 'portfolio:portfolio-detail' portfolio.slug %}">
-  <div class="flex justify-center pb-10 mb-10 lg:mb-0">
-      <div class="rounded-lg border-sky-600 shadow-2xl bg-white text-center">
-          <img class="rounded-t-lg" src="{{ portfolio.images.url }}" alt="{{ portfolio.images.alt }}"/>
-        <div class="p-6">
-          <h2 class="text-gray-900 text-lg font-medium">{{portfolio.title}}</h2>
-        </div>
-      </div>
+<a class="relative hover:scale-105 ease-in-out duration-1000 shadow-lg rounded-lg" href="{% url 'portfolio:portfolio-detail' portfolio.slug %}">
+  <div class="block rounded-lg bg-white text-white shadow-secondary-1 dark:bg-surface-dark">
+    <img class="rounded-lg" src="{{ portfolio.images.url }}" alt="{{ portfolio.images.alt }}" />
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
+    <div class="absolute top-0 p-6">
+        <h5 class="mb-2 text-xl font-medium leading-tight text-white">
+          {{portfolio.title}}
+        </h5>
+    </div>
   </div>
 </a>
 

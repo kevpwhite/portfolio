@@ -1,4 +1,5 @@
 from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
 
 # Create your models here.
 class Category(models.Model):
@@ -14,7 +15,7 @@ class Category(models.Model):
 class Portfolio(models.Model):
     title = models.CharField(max_length=200)
     images = models.ImageField(upload_to='images/portfolio')
-    description = models.TextField()
+    content = CKEditor5Field('Content', config_name='default', null=True)
     slug = models.SlugField(max_length=200, default="")
     category = models.ForeignKey('Category', related_name='category', on_delete=models.CASCADE)
     

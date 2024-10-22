@@ -1,20 +1,15 @@
 from django.contrib import admin
 from .models import Category, Portfolio, PortfolioImage
 
-# Register your models here.
-class PortfolioAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category',)
-    search_fields =('title', 'category')
-    prepopulated_fields = {'slug': ('title',)}
-
 class PortfolioImageAdmin(admin.StackedInline):
     model = PortfolioImage
+    extra = 1
 
-@admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
     inlines = [PortfolioImageAdmin]
- 
-    class Meta:
-       model = Portfolio
-    
+    list_display = ('title', 'slug', 'category',) 
+    search_fields = ('title', 'category',)
+
 admin.site.register(Category)
+admin.site.register(Portfolio, PortfolioAdmin)
