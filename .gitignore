@@ -1,0 +1,14 @@
+.env
+.env.prod
+.env.prod.db
+*.pyc
+0*.py
+_initial.py
+localhost.crt
+localhost.key
+fullchain.pem
+privkey.pem
+media/images/*
+!media/images/
+!media/images/.gitkeep
+__pycache__
