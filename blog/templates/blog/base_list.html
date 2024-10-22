@@ -8,13 +8,13 @@
   <div class="sm:flex sm:justify-between sm:gap-2">
     <div>
       <h3 class="text-lg text-gray-900 sm:text-xl">{{ post.title }}</h3>
-      <p class="text-md text-gray-900">
+      <h6 class="mt-4 text-sm text-gray-500">
         Author: {{ post.author|default:"Unknown Author" }}
-      </p>
+      </h6>
     </div>
   </div>
 
-  <p class="mt-4 text-pretty text-sm text-gray-500">
+  <p class="text-pretty text-sm text-gray-500">
     {{ post.content|safe|truncatewords:30}}
   </p>
 
