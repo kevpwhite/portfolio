@@ -46,11 +46,13 @@
         </li>
         {% endfor %}
       </ul>
-      <div class="mx-auto min-h-screen lg:grid lg:grid-cols-3 lg:gap-8">
-        {% for post in posts %}
+      <section class="mx-auto lg:grid lg:grid-cols-3 lg:gap-8">
+        <div>
+          {% for post in posts %}
             {% include 'blog/base_list.html' %}
-        {% endfor %}
-    </div>{% comment %}----------end grid {% endcomment %}
+          {% endfor %}
+        </div>
+      </section>{% comment %}----------end grid {% endcomment %}
     {% include 'pagination.html' %}
     </div>{% comment %}---------end container {% endcomment %}
 
