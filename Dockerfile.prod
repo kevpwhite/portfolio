@@ -3,7 +3,7 @@
 #########
 
 # pull official base image
-FROM python:3.9.13-alpine
+FROM python:3.11-alpine
 
 # create directory for the app user
 RUN mkdir -p /home/app
