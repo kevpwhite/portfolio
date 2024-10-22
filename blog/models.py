@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django_ckeditor_5.fields import CKEditor5Field
 from mptt.models import MPTTModel, TreeForeignKey
 
 STATUS = (
@@ -11,11 +12,10 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     featured_image = models.ImageField(upload_to='images/blog', null=True)
     featured_img_alt_tag = models.CharField(max_length=200, null=True)
-    video_url = models.URLField(max_length=200, null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE, related_name='blog_posts')
     updated_on = models.DateField(auto_now= True)
-    content = models.TextField()
+    content = CKEditor5Field('Content', config_name='default')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
@@ -28,7 +28,7 @@ class Post(models.Model):
 
 
 class PostCategory(MPTTModel):
-    name = models.CharField(max_length=200)
+    category = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
 
@@ -37,7 +37,7 @@ class PostCategory(MPTTModel):
         verbose_name_plural = 'Post Categories'
 
     def __str__(self):
-        return self.name
+        return self.category
 
 class PostImage(models.Model):
     post = models.ForeignKey('Post', related_name='postimages', on_delete=models.CASCADE)
