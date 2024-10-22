@@ -1,10 +1,10 @@
 <a href="{% url 'blog:post-detail' post.slug %}" class="hover:scale-105 ease-in-out duration-1000 relative block overflow-hidden rounded-lg shadow-lg border border-gray-100 p-4">
-  <div class="hidden sm:block sm:shrink-0">
+  <div class="block shrink-0">
     <img alt="" src="{{ post.featured_image.url }}" class="rounded-lg object-cover shadow-sm h-40 w-full" />
   </div>
 
-  <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-sky-600 via-black-500 to-gray-600"></span>
-
+  <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-gray-900 via-sky-600 to-gray-900"></span>
+  
   <div class="sm:flex sm:justify-between sm:gap-2">
     <div>
       <h3 class="text-lg text-gray-900 sm:text-xl">{{ post.title }}</h3>

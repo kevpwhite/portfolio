@@ -105,11 +105,16 @@ JAZZMIN_SETTINGS = {
         "auth.User": "fas fa-user",
         "auth.Group": "fa-solid fa-users",
         "sites.Site": "fas fa-globe",
+        "blog.Post": "fa-brands fa-blogger",
+        "blog.PostCategory": "fas fa-tags",
+        "home.ContactUs": "fas fa-envelope",
+        "portfolio.Portfolio": "fas fa-briefcase",
+        "portfolio.Category": "fas fa-tags",  
     },
 
     "topmenu_links": [
         {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
-        {"name": "Live Site", "url": "https://techprohq.com", "new_window": True},
+        {"name": "Live Site", "url": "https://kevinpwhite.com", "new_window": True},
         {"model": "auth.User"},
     ],
 
