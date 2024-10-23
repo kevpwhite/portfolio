@@ -451,6 +451,10 @@ h4, h5, h6 {
   font-size: 1.25em;
 }
 
+a {
+  color: #0284c7;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -2307,16 +2311,8 @@ textarea.form-control.is-invalid {
   margin-bottom: 2.5rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.-mt-\[3\.2rem\] {
-  margin-top: -3.2rem;
-}
-
-.ml-24 {
-  margin-left: 6rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .mb-3 {
@@ -2325,6 +2321,10 @@ textarea.form-control.is-invalid {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .mt-6 {
@@ -2969,6 +2969,11 @@ textarea.form-control.is-invalid {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -3349,6 +3354,10 @@ textarea.form-control.is-invalid {
     margin-bottom: 0px;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -3425,11 +3434,5 @@ textarea.form-control.is-invalid {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:block {
-    display: block;
   }
 }
