@@ -11,7 +11,7 @@
           </div>
           <div class="py-6 justify-start">
               <h1 class="text-4xl mb-4">{{ portfolio.title }}</h1>
-              {{portfolio.description | safe | linebreaksbr }}
+              {{portfolio.content | safe }}
             <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
               <div class="carousel-inner relative w-full overflow-hidden">
                 {% for portfolioimage in portfolio.portfolioimages.all %}

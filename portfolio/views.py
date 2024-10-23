@@ -2,8 +2,23 @@ from .models import Category, Portfolio
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.shortcuts import get_object_or_404
+from django.contrib.postgres.search import SearchVector
 
 app_name='portfolio'
+
+class SearchResultsView(ListView):
+    model = Portfolio
+    template_name = 'portfolio/search.html'
+    context_object_name = 'portfoliosearch_list'
+    paginate_by = 12
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            return Portfolio.objects.annotate(search=SearchVector('title', 'content')).filter(search=query)
+        return Portfolio.objects.none()
+    
+    
     
 # Create your views here.    
 class PortfolioListView(ListView):

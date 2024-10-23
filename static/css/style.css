@@ -2264,6 +2264,11 @@ textarea.form-control.is-invalid {
   margin-bottom: 1.5rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -2422,10 +2427,6 @@ textarea.form-control.is-invalid {
   width: auto;
 }
 
-.w-14 {
-  width: 3.5rem;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -2440,6 +2441,10 @@ textarea.form-control.is-invalid {
 
 .w-32 {
   width: 8rem;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-4 {
@@ -3062,6 +3067,11 @@ textarea.form-control.is-invalid {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
 .opacity-25 {
   opacity: 0.25;
 }
@@ -3102,11 +3112,6 @@ textarea.form-control.is-invalid {
 
 .shadow-black {
   --tw-shadow-color: #000;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-sky-600\/50 {
-  --tw-shadow-color: rgb(2 132 199 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -3192,6 +3197,10 @@ textarea.form-control.is-invalid {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:no-underline:hover {
@@ -3393,6 +3402,10 @@ textarea.form-control.is-invalid {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-11 {
+    width: 2.75rem;
   }
 
   .lg\:w-1\/2 {

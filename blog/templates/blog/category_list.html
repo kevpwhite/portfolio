@@ -3,22 +3,33 @@
 {% block content %}
 
 <div class="animate__animated animate__fadeInUp container mx-auto p-8 lg:px-20">
-  <h1 class="text-center text-4xl my-6">Category: {{ category }}</h1>
-  {% if object_list %}
+  <h1 class="text-center text-4xl my-6">{{ category.category }}</h1>
 
-  <section class="mx-auto lg:grid lg:grid-cols-3 lg:gap-8">
-    <div>
-      {% for post in categories %}
-        {% include 'blog/base_list.html' %}
+  {% if child_categories %}
+    <ul class="flex justify-center mb-6">
+      {% for child in child_categories %}
+        <li class="mx-4">
+          <a href="{% url 'blog:category-list' child.slug %}" class="text-blue-500 hover:underline">
+            Subcategories: {{ child.category }}
+          </a>
+        </li>
       {% endfor %}
-    </div>
-  </section>
+    </ul>
+  {% endif %}
 
+  {% if posts %}
+  <section class="mx-auto lg:grid lg:grid-cols-3 lg:gap-8">
+    {% for post in posts %}
+      {% include 'blog/base_list.html' %}
+    {% endfor %}
+  </section>
+  
   {% else %}
     <div class="mx-auto min-h-screen">
       <h6 class="text-center text-2xl">Sorry, nothing has been posted yet!</h6>
     </div>
   {% endif %}
+
   {% include 'pagination.html' %}
 </div>{% comment %}---------end container {% endcomment %}
 {% endblock %}
