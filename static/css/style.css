@@ -994,10 +994,6 @@ textarea.form-control.is-invalid {
   background-color: #0d6efd;
 }
 
-.dropdown-menu-dark .dropdown-item.disabled {
-  color: #adb5bd;
-}
-
 .nav-tabs .nav-link {
   color: rgb(75, 85, 99);
 }
@@ -1158,14 +1154,6 @@ textarea.form-control.is-invalid {
   color: #fff;
 }
 
-.btn-close.disabled {
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  opacity: 0.25;
-}
-
 .carousel.pointer-event {
   touch-action: pan-y;
 }
@@ -1252,16 +1240,6 @@ textarea.form-control.is-invalid {
   background-image: radial-gradient(circle, hsla(0deg, 0%, 100%, 0.2) 0, hsla(0deg, 0%, 100%, 0.3) 40%, hsla(0deg, 0%, 100%, 0.4) 50%, hsla(0deg, 0%, 100%, 0.5) 60%, hsla(0deg, 0%, 100%, 0) 70%);
 }
 
-.datepicker-cell.disabled {
-  color: #ccc;
-  cursor: default;
-  pointer-events: none;
-}
-
-.datepicker-cell.disabled:hover {
-  cursor: default;
-}
-
 .datepicker-cell.current .datepicker-cell-content {
   border: 1px solid #000;
 }
@@ -1290,24 +1268,6 @@ textarea.form-control.is-invalid {
   color: #fff;
   background-color: #2979ff;
   font-weight: 400;
-}
-
-.timepicker-time-tips-minutes.disabled {
-  color: #b3afaf;
-  pointer-events: none;
-  background-color: transparent;
-}
-
-.timepicker-time-tips-inner.disabled {
-  color: #b3afaf;
-  pointer-events: none;
-  background-color: transparent;
-}
-
-.timepicker-time-tips-hours.disabled {
-  color: #b3afaf;
-  pointer-events: none;
-  background-color: transparent;
 }
 
 .timepicker-time-tips.active {
@@ -2291,10 +2251,6 @@ textarea.form-control.is-invalid {
   margin-top: 5rem;
 }
 
-.mr-0 {
-  margin-right: 0px;
-}
-
 .mr-auto {
   margin-right: auto;
 }
@@ -2381,10 +2337,6 @@ textarea.form-control.is-invalid {
 
 .h-12 {
   height: 3rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-screen {
@@ -2750,10 +2702,6 @@ textarea.form-control.is-invalid {
   padding: 2rem;
 }
 
-.p-0 {
-  padding: 0px;
-}
-
 .p-4 {
   padding: 1rem;
 }
@@ -2870,10 +2818,6 @@ textarea.form-control.is-invalid {
 
 .pl-0 {
   padding-left: 0px;
-}
-
-.pr-2 {
-  padding-right: 0.5rem;
 }
 
 .pt-4 {
@@ -2997,11 +2941,6 @@ textarea.form-control.is-invalid {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -3010,6 +2949,11 @@ textarea.form-control.is-invalid {
 .text-sky-600 {
   --tw-text-opacity: 1;
   color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-green-700 {
@@ -3374,11 +3318,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 1024px) {
-  .lg\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .lg\:my-2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
