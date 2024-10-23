@@ -32,4 +32,24 @@
     a {
         color: #0284c7;
     }
+    /* General styles for code blocks with a dark theme */
+    pre {
+        background-color: #1e1e1e;  /* Dark gray background */
+        border: 1px solid #444;      /* Dark border color */
+        border-radius: 5px;         /* Rounded corners */
+        padding: 25px;              /* Padding inside the block */
+        overflow: auto;             /* Enable scrolling for long lines */
+        font-family: 'Fira Code', monospace; /* Use a monospace font */
+        color: #c5c5c5;             /* Light gray text color */
+        white-space: pre-wrap;      /* Wrap long lines */
+    }
+
+    /* Styles for inline code */
+    code {
+        background-color: #2a2a2a;  /* Slightly lighter dark background */
+        border-radius: 3px;         /* Rounded corners for inline code */
+        padding: 2px 4px;           /* Padding for inline code */
+        font-family: 'Fira Code', monospace; /* Use a monospace font */
+        color: #f8f8f2;             /* Light text color */
+    }
   }
