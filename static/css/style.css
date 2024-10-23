@@ -2210,12 +2210,16 @@ textarea.form-control.is-invalid {
   top: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.-bottom-0 {
+  bottom: -0px;
 }
 
 .right-0 {
   right: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .left-0 {
@@ -2241,11 +2245,6 @@ textarea.form-control.is-invalid {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
 }
 
 .my-6 {
@@ -3344,6 +3343,10 @@ textarea.form-control.is-invalid {
 
   .lg\:mt-80 {
     margin-top: 20rem;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .lg\:flex {
