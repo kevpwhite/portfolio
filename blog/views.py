@@ -24,6 +24,9 @@ class PostListView(ListView):
     context_object_name='posts'
     paginate_by = 6
 
+    def get_queryset(self):
+        return Post.objects.filter(status=1)
+
     def get_context_data(self, **kwargs):
         context = super(PostListView, self).get_context_data(**kwargs)
         context['categories_list'] = PostCategory.objects.all()

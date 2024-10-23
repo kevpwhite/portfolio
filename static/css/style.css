@@ -989,6 +989,10 @@ textarea.form-control.is-invalid {
   background-color: #0d6efd;
 }
 
+.dropdown-menu.show {
+  display: block;
+}
+
 .dropdown-menu-dark .dropdown-item.active {
   color: #fff;
   background-color: #0d6efd;
@@ -1154,6 +1158,18 @@ textarea.form-control.is-invalid {
   color: #fff;
 }
 
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
 .carousel.pointer-event {
   touch-action: pan-y;
 }
@@ -1227,6 +1243,10 @@ textarea.form-control.is-invalid {
   z-index: 1045;
 }
 
+.offcanvas-backdrop.show {
+  opacity: 0.5;
+}
+
 .offcanvas.show {
   transform: none;
 }
@@ -1294,6 +1314,10 @@ textarea.form-control.is-invalid {
 }
 
 .timepicker-icon-down.active {
+  opacity: 1;
+}
+
+.timepicker-modal .fade.show {
   opacity: 1;
 }
 
@@ -2219,6 +2243,11 @@ textarea.form-control.is-invalid {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -2249,6 +2278,10 @@ textarea.form-control.is-invalid {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .mr-auto {
@@ -2335,8 +2368,8 @@ textarea.form-control.is-invalid {
   height: 2.5rem;
 }
 
-.h-12 {
-  height: 3rem;
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-screen {
@@ -2349,10 +2382,6 @@ textarea.form-control.is-invalid {
 
 .h-2 {
   height: 0.5rem;
-}
-
-.h-14 {
-  height: 3.5rem;
 }
 
 .h-full {
@@ -2371,12 +2400,12 @@ textarea.form-control.is-invalid {
   width: 100%;
 }
 
-.w-8 {
-  width: 2rem;
-}
-
 .w-auto {
   width: auto;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-10 {
@@ -3001,16 +3030,6 @@ textarea.form-control.is-invalid {
   color: rgb(87 83 78 / var(--tw-text-opacity));
 }
 
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -3042,15 +3061,15 @@ textarea.form-control.is-invalid {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -3273,6 +3292,11 @@ textarea.form-control.is-invalid {
     padding-bottom: 3rem;
   }
 
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -3286,11 +3310,6 @@ textarea.form-control.is-invalid {
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
 
@@ -3398,10 +3417,6 @@ textarea.form-control.is-invalid {
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
-  }
-
-  .lg\:pt-5 {
-    padding-top: 1.25rem;
   }
 
   .lg\:text-lg {

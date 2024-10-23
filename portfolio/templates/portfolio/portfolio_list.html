@@ -48,11 +48,14 @@
         </li>
         {% endfor %}
       </ul>
-      <div class="mx-auto my-6 lg:grid lg:grid-cols-3 lg:gap-8">
+
+      <section class="mx-auto my-6 lg:grid lg:grid-cols-3 lg:gap-8">
         {% for portfolio in portfolios %}
           {% include 'portfolio/base_list.html' %}
         {% endfor %}
-      </div>{% comment %}----------end grid {% endcomment %}
+      </section>
+
       {% include 'pagination.html' %}
-    </div>{% comment %}---------end container {% endcomment %}
+    </div>
+
 {% endblock %}

@@ -1,4 +1,4 @@
-<a class="relative hover:scale-105 ease-in-out duration-1000 shadow-lg rounded-lg" href="{% url 'portfolio:portfolio-detail' portfolio.slug %}">
+<a class="relative block my-10 rounded-lg shadow-2xl hover:scale-105 ease-in-out duration-1000" href="{% url 'portfolio:portfolio-detail' portfolio.slug %}">
   <div class="block rounded-lg bg-white text-white shadow-secondary-1 dark:bg-surface-dark">
     <img class="rounded-lg" src="{{ portfolio.images.url }}" alt="{{ portfolio.images.alt }}" />
     <!-- Dark overlay -->
