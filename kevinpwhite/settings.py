@@ -114,7 +114,7 @@ JAZZMIN_SETTINGS = {
 
     "topmenu_links": [
         {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
-        {"name": "Live Site", "url": "https://techprohq.com", "new_window": True},
+        {"name": "Live Site", "url": "https://kevinpwhite.com", "new_window": True},
         {"model": "auth.User"},
     ],
 
@@ -195,10 +195,16 @@ CKEDITOR_5_CONFIGS = {
         },
         'htmlSupport': {
             'allow': [
-                {'name': '/.*/', 'attributes': True, 'classes': True, 'styles': True}
+                {'name': 'ul', 'attributes': True, 'classes': True, 'styles': True},
+                {'name': 'ol', 'attributes': True, 'classes': True, 'styles': True},
+                {'name': 'li', 'attributes': True, 'classes': True, 'styles': True},
+                {'name': 'table', 'attributes': True, 'classes': True, 'styles': True},
+                {'name': 'th', 'attributes': True, 'classes': True, 'styles': True},
+                {'name': 'td', 'attributes': True, 'classes': True, 'styles': True},
+                {'name': '/.*/', 'attributes': True, 'classes': True, 'styles': True}  # This allows all elements
             ]
         },
-        'extraAllowedContent': 'iframe[*]{*}(*)',  # Allow iframes with all attributes
+        'extraAllowedContent': 'ul[*]{*}(*) ol[*]{*}(*) li[*]{*}(*) table[*]{*}(*) th[*]{*}(*) td[*]{*}(*) iframe[*]{*}(*)',
         'mediaEmbed': {
             'previewsInData': True
         },

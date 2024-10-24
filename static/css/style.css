@@ -419,21 +419,25 @@ video {
   display: none;
 }
 
+/* Global styles */
+
 html {
   scroll-behavior: smooth;
 }
+
+/* Heading font styles */
 
 h1, h2, h3, h4, h5, h6, dt, dd, span, a {
   font-family: 'Russo One', sans-serif;
 }
 
-dd {
-  font-family: 'Lora', serif;
-}
+/* Paragraph font */
 
 p {
   font-family: 'Rubik', sans-serif;
 }
+
+/* Font size adjustments */
 
 h1 {
   font-size: 2.25em;
@@ -451,44 +455,132 @@ h4, h5, h6 {
   font-size: 1.25em;
 }
 
+/* Link color */
+
 a {
   color: #0284c7;
 }
 
-/* General styles for code blocks with a dark theme */
+/* List styling for CKEditor content */
+
+.ckeditor ul, .ckeditor ol {
+  padding-left: 20px;
+  /* Indent the entire list */
+  margin-bottom: 1rem;
+  font-family: 'Lora', serif;
+}
+
+.ckeditor ul {
+  list-style-type: disc;
+  /* Bullet points for unordered lists */
+}
+
+.ckeditor ol {
+  list-style-type: decimal;
+  /* Numbering for ordered lists */
+}
+
+.ckeditor ul li, .ckeditor ol li {
+  margin-bottom: 0.5rem;
+  /* Space between list items */
+  line-height: 1.5;
+  /* Increased readability */
+}
+
+.ckeditor ul ul, .ckeditor ol ol {
+  padding-left: 40px;
+  /* Additional indentation for nested lists */
+}
+
+.ckeditor ul ul li, .ckeditor ol ol li {
+  margin-bottom: 0.5rem;
+  /* Ensure same margin for nested list items */
+  line-height: 1.5;
+}
+
+/* Code block styling */
 
 pre {
   background-color: #1e1e1e;
-  /* Dark gray background */
   border: 1px solid #444;
-  /* Dark border color */
   border-radius: 5px;
-  /* Rounded corners */
   padding: 25px;
-  /* Padding inside the block */
   overflow: auto;
-  /* Enable scrolling for long lines */
   font-family: 'Fira Code', monospace;
-  /* Use a monospace font */
   color: #c5c5c5;
-  /* Light gray text color */
   white-space: pre-wrap;
-  /* Wrap long lines */
 }
-
-/* Styles for inline code */
 
 code {
   background-color: #2a2a2a;
-  /* Slightly lighter dark background */
   border-radius: 3px;
-  /* Rounded corners for inline code */
-  padding: 2px 4px;
-  /* Padding for inline code */
+  padding: 0px 4px;
   font-family: 'Fira Code', monospace;
-  /* Use a monospace font */
   color: #f8f8f2;
-  /* Light text color */
+}
+
+/* Table styling */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-family: 'Lora', serif;
+  overflow-x: auto;
+  display: block;
+}
+
+th, td {
+  padding: 12px 16px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+th {
+  background-color: #0284c7;
+  color: #f8f8f2;
+  font-weight: bold;
+  border-bottom: 2px solid #0284c7;
+}
+
+tr:nth-child(even) {
+  background-color: #cecece;
+}
+
+tr:hover {
+  background-color: #727272;
+  color: #fff;
+}
+
+/* Responsive design */
+
+@media (max-width: 640px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    word-wrap: break-word;
+  }
+
+  td {
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
 }
 
 *, ::before, ::after {
