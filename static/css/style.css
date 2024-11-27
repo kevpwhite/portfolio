@@ -419,21 +419,25 @@ video {
   display: none;
 }
 
+/* Global styles */
+
 html {
   scroll-behavior: smooth;
 }
+
+/* Heading font styles */
 
 h1, h2, h3, h4, h5, h6, dt, dd, span, a {
   font-family: 'Russo One', sans-serif;
 }
 
-dd {
-  font-family: 'Lora', serif;
-}
+/* Paragraph font */
 
 p {
   font-family: 'Rubik', sans-serif;
 }
+
+/* Font size adjustments */
 
 h1 {
   font-size: 2.25em;
@@ -451,8 +455,131 @@ h4, h5, h6 {
   font-size: 1.25em;
 }
 
+/* Link color */
+
 a {
   color: #0284c7;
+}
+
+/* List styling for CKEditor content */
+
+.ckeditor ul, .ckeditor ol {
+  padding-left: 20px;
+  /* Indent the entire list */
+  margin-bottom: 1rem;
+  font-family: 'Lora', serif;
+}
+
+.ckeditor ul {
+  list-style-type: disc;
+  /* Bullet points for unordered lists */
+}
+
+.ckeditor ol {
+  list-style-type: decimal;
+  /* Numbering for ordered lists */
+}
+
+.ckeditor ul li, .ckeditor ol li {
+  margin-bottom: 0.5rem;
+  /* Space between list items */
+  line-height: 1.5;
+  /* Increased readability */
+}
+
+.ckeditor ul ul, .ckeditor ol ol {
+  padding-left: 40px;
+  /* Additional indentation for nested lists */
+}
+
+.ckeditor ul ul li, .ckeditor ol ol li {
+  margin-bottom: 0.5rem;
+  /* Ensure same margin for nested list items */
+  line-height: 1.5;
+}
+
+/* Code block styling */
+
+pre {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 25px;
+  overflow: auto;
+  font-family: 'Fira Code', monospace;
+  color: #c5c5c5;
+  white-space: pre-wrap;
+}
+
+code {
+  background-color: #2a2a2a;
+  border-radius: 3px;
+  padding: 0px 4px;
+  font-family: 'Fira Code', monospace;
+  color: #f8f8f2;
+}
+
+/* Table styling */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-family: 'Lora', serif;
+  overflow-x: auto;
+  display: block;
+}
+
+th, td {
+  padding: 12px 16px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+th {
+  background-color: #0284c7;
+  color: #f8f8f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #cecece;
+}
+
+tr:hover {
+  background-color: #727272;
+  color: #fff;
+}
+
+/* Responsive design */
+
+@media (max-width: 640px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    word-wrap: break-word;
+  }
+
+  td {
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
 }
 
 *, ::before, ::after {
@@ -2242,10 +2369,6 @@ textarea.form-control.is-invalid {
   margin: 0px;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -2709,11 +2832,6 @@ textarea.form-control.is-invalid {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .object-cover {
@@ -3368,6 +3486,10 @@ textarea.form-control.is-invalid {
 
   .lg\:h-6 {
     height: 1.5rem;
+  }
+
+  .lg\:h-96 {
+    height: 24rem;
   }
 
   .lg\:w-auto {
