@@ -306,5 +306,5 @@ EMAIL_USE_TLS = env('EMAIL_USE_TLS')
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 
 ADMINS = [
-    (env('EMAIL_ADMIN'), env('EMAIL_ADDRESS')),
+    (env('EMAIL_ADMIN'), env('BCC_EMAIL')),
 ]
