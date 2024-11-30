@@ -13,3 +13,4 @@ django-phonenumber-field==8.0.0
 phonenumbers==8.13.47
 django-ckeditor-5==0.2.14
 django-jazzmin==3.0.1
+django-recaptcha==4.0.0

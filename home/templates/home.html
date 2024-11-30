@@ -1092,23 +1092,37 @@
           </div>
           {% endif %}         
 
-          <h2 class="text-xl pb-2">Send Me a Email</h2>
+          <h2 id="contact-form" class="text-xl pb-2">Send Me a Email</h2>
           <form action="" method="post">
             {% csrf_token %}
-              {% for field in form %}
-              {% render_honeypot_field %}
-              <div class="form-group mb-6">
-                {% if form.errors %}
-                  {% for error in field.errors %}<div class="bg-red-100 rounded-lg py-5 px-6 mb-4 text-base text-red-700 mb-3" role="alert">{{ error }}</div>{% endfor %}
+            {% render_honeypot_field %}
+            {% for field in form %}
+            <div class="form-group mb-6">
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                    <div class="bg-red-100 rounded-lg py-5 px-6 mb-4 text-base text-red-700 mb-3" role="alert">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
                 {% endif %}
-                {{ field.label_tag }}{{ field }}
-                  {% if field.help_text %}
-                    <p class="bg-yellow-100 rounded-lg py-5 px-6 mb-4 text-base text-yellow-700 mb-3">{{ field.help_text|safe }}</p>
-                  {% endif %}
-              </div>
+                
+                <!-- Render label only if field is not 'captcha' -->
+                {% if field.name != 'captcha' %}
+                    {{ field.label_tag }}
+                {% endif %}
+                
+                <!-- Render field -->
+                {{ field }}
+                
+                <!-- Render help text if available -->
+                {% if field.help_text %}
+                <p class="bg-yellow-100 rounded-lg py-5 px-6 mb-4 text-base text-yellow-700 mb-3">{{ field.help_text|safe }}</p>
+                {% endif %}
+            </div>
             {% endfor %}
             <input type="submit" value="Submit" class="hover:scale-105 ease-in-out duration-1000 w-full px-6 py-2.5 bg-sky-600 text-white font-bold leading-tight uppercase rounded shadow-md hover:bg-sky-500 hover:shadow-lg focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-500 active:shadow-lg transition duration-300 ease-in-out">
-          </form>
+         </form>
+             
           <!-- This DIV is here for the purpose of adding classes to NPM RUN BUILD Tailwinds.css for the form. It is added in via the widget. -->
           <div class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none hidden"></div>
         </div>

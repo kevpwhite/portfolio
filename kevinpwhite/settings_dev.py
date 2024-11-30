@@ -33,12 +33,13 @@ environ.Env.read_env()
 # SECURE_HSTS_PRELOAD = True
 # SECURE_REFERRER_POLICY = "strict-origin"
 # SECURE_BROWSER_XSS_FILTER = True
-# CAPTCHA_FONT_SIZE=42
-# CAPTCHA_IMAGE_SIZE=[200,48]
-# CAPTCHA_BACKGROUND_COLOR="#ffffff"
 #Honeypot settings
 HONEYPOT_FIELD_NAME = 'user_name'
 HONEYPOT_VALUE = 'kevinpwhite'
+
+# Recaptcha settings
+RECAPTCHA_PUBLIC_KEY = env("RECAPTCHA_PUBLIC_KEY")
+RECAPTCHA_PRIVATE_KEY = env("RECAPTCHA_PRIVATE_KEY")
 
 # Site ID is needed for this
 SITE_ID = 1
@@ -76,6 +77,7 @@ INSTALLED_APPS = [
     'captcha',
     'honeypot',
     'django_ckeditor_5',
+    'django_recaptcha',
 ]
 
 MIDDLEWARE = [
@@ -311,5 +313,5 @@ EMAIL_USE_TLS = env('EMAIL_USE_TLS')
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 
 ADMINS = [
-    (env('EMAIL_ADMIN'), env('EMAIL_ADDRESS')),
+    (env('EMAIL_ADMIN'), env('BCC_EMAIL')),
 ]
