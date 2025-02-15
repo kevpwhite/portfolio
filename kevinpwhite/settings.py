@@ -44,6 +44,9 @@ RECAPTCHA_PRIVATE_KEY = env("RECAPTCHA_PRIVATE_KEY")
 # Site ID is needed for this
 SITE_ID = 1
 
+# Read MAINTENANCE_MODE from .env (default to "off" if not set)
+MAINTENANCE_MODE = env("MAINTENANCE_MODE", default="off")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -89,6 +92,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'portfolio.middleware.MaintenanceMiddleware',
 ]
 
 JAZZMIN_SETTINGS = {
